@@ -54,4 +54,4 @@ data <- cbind(subjectData, yData, xData)
 averageData <- ddply(data, .(subject, activity), function(x) colMeans(x[, 3:68]))
 
 # Export the Data
-write.table(averageData, "./UCI HAR Dataset/average_data.txt")
+write.table(averageData, "./UCI HAR Dataset/average_data.txt", row.names = FALSE)
